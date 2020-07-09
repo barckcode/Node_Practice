@@ -40,11 +40,11 @@ router.post('/', async function(req, res, next) {
   const { body: product } = req
 
   try {
-    const createProduct = await productService.createProduct({ product });
+    const createdProduct = await productService.createProduct({ product });
 
     res.status(201).json({
-      data: createProduct,
-      message: 'products listed'
+      data: createdProduct,
+      message: 'product created'
     });
   } catch(err) {
     next(err);
@@ -75,7 +75,7 @@ router.delete('/:productId', async function(req, res, next) {
 
     res.status(200).json({
       data: product,
-      message: 'products deleted'
+      message: 'product deleted'
     });
   } catch(err) {
     next(err);

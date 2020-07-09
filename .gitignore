@@ -2,3 +2,6 @@ node_modules
 
 # Local History:
 .history
+
+## Varaibles
+.env
